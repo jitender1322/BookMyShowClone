@@ -1,9 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-mongoose.connect('mongodb://localhost:27017/Classes1')
-
-const db = mongoose.connection;
-
-db.on('open',(err)=>{
-    console.log(err ? err : 'Connected to MongoDB Database');
+const uri = "mongodb+srv://jitendersarswat6:Jeet1322@cluster0.txt54.mongodb.net/mydatabase?retryWrites=true&w=majority&appName=Cluster0";
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log("Connected to MongoDB Atlas");
+})
+.catch((error) => {
+  console.error("Error connecting to MongoDB Atlas", error);
 });
+
+

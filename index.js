@@ -11,6 +11,6 @@ app.use('/uploads',express.static(path.join(__dirname,'uploads')))
 
 app.use('/', require('./routes'));
 
-app.listen(1008,(err)=>{
+app.listen(1080,(err)=>{
     err ? console.error(err) : console.log('Server is running on port 1008');
 });
